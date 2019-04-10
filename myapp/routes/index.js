@@ -5,8 +5,14 @@ var router = express.Router() //vanilla instance
   router logic lives here
 */
 /* GET home page. */
-router.get("/", function(req, res, next) {
-  res.render("index", { title: "Express" })
-})
+/**
+ * want to seperate the root
+ * logic  that matches url pattern is here
+ * but also the handler logic is defined
+ * part of the root handler.
+ * would like to seperate for modular approach.
+ */
+let index = require("../controllers/index")
+router.get("/", index.index)
 
 module.exports = router
