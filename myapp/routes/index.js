@@ -12,7 +12,7 @@ var router = express.Router() //vanilla instance
  * part of the root handler.
  * would like to seperate for modular approach.
  */
-let index = require("../controllers/index")
-router.get("/", index.index)
+let landing = require("../controllers/landing")
+router.get("/", landing.get_landing)
 
 module.exports = router
