@@ -15,7 +15,8 @@ exports.get_landing = function(req, res, next) {
 //     res.redirect("/")
 //   })
 // }
+
 exports.submit_lead = function(req, res, next) {
-  console.log("lead email:", req.body.lead_email)
+  console.log("lead email:", req.body.lead_email) //so the body.lead_email comes up to here fine
   res.redirect("/")
 }
